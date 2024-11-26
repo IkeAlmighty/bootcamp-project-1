@@ -16,16 +16,16 @@ function addCartItemToLocalStorage(pastryOrTeaItem) {
 // get each button viewing item in modal
 const popoutButtons = document.getElementsByClassName("show-item-button");
 
-const pastriesData = {
-    "Pastry 1": { description: "pastry 1 descrip" },
-};
-
+// add an event listener for each button
 for (button of popoutButtons) {
     button.addEventListener("click", function (event) {
-        const key = event.target.parentElement.children[0].textContent;
-        const description = pastriesData[key].description;
+        const itemName = event.target.parentElement.children[0].textContent;
+        const description = event.target.parentElement.children[1].textContent;
+        const src = event.target.parentElement.dataset.imageSrc;
+        console.log(src);
 
         document.getElementById("modal-description").textContent = description;
-        document.getElementById("modal-name").textContent = key;
+        document.getElementById("modal-name").textContent = itemName;
+        document.getElementById("modal-image").setAttribute("src", src);
     });
 }
