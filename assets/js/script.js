@@ -13,9 +13,19 @@ function addCartItemToLocalStorage(pastryOrTeaItem) {
     localStorage.setItem("cart", JSON.stringify(cartItems));
 }
 
-function openModal(description) {
-    const modal = document.getElementById("modal");
+// get each button viewing item in modal
+const popoutButtons = document.getElementsByClassName("show-item-button");
 
-    // set classes for modal
-    modal.children[0].textContent = description;
+// add an event listener for each button
+for (button of popoutButtons) {
+    button.addEventListener("click", function (event) {
+        const itemName = event.target.parentElement.children[0].textContent;
+        const description = event.target.parentElement.children[1].textContent;
+        const src = event.target.parentElement.dataset.imageSrc;
+        console.log(src);
+
+        document.getElementById("modal-description").textContent = description;
+        document.getElementById("modal-name").textContent = itemName;
+        document.getElementById("modal-image").setAttribute("src", src);
+    });
 }
