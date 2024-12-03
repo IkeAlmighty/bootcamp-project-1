@@ -1,37 +1,21 @@
-# Edex Bootcamp Project 1
-
-## Day 1
-
 ### Project Title
 
 Sweet Treats
 
 ### Project Description
 
-A storefront webpage for pastries and tea
+A storefront webpage of pastries for customers to view sweet treats and make a selection for purchase.
 
 ### User Story
 
-As a baker I want an online storefront so that I can market and sell my baked goods and teas.
+As a baker I want an online storefront so that I can market and sell my baked goods. I want to display images of my items available so the customer can make their decision and know exactly what to expect. The customer will be able to browse available pastries and add item to a cart for purchase.
 
-As a customer I want to be able to browse baked goods and teas so that I can buy them
+As a customer I want to be able to browse baked goods so that I can buy them. I want to know what I am buying and would like to make a purchase online to avoid waiting in line in person.
 
-### Wireframe or sketch of the design
+### Screenshot of application
 
-![image](./project-1-bootcamp-mockup.png)
+![image](./sweet-treats-screenshot.png)
 
-### Rough breakdown of tasks
+### Link to deployed application
 
--   storefront.html
--   styling using tailwind
--   connecting tailwind
--   javascript for changing the page dynamically
--   IF dynamic page change takes too long we can just make another html page
--   javascript for storing user selected teas and bakery items in localstorage
--   modals for enlarging images
--   if we have time: show pairings
-
-## General Workflows & Advice from Eric
-
--   Scrum meeting everyday (could be over text? idk)
--   get help in this order: GROUP -> TAs & Eric
+https://ikealmighty.github.io/bootcamp-project-1/
