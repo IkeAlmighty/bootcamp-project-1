@@ -9,9 +9,9 @@ else {
     // create an element to list a single item in the array at a time//
     for(let item of cartItemsList){
         let pastry = document.createElement('li');
-        pastry.classList.add('border')
-        pastry.classList.add('rounded')
-        pastry.classList.add('my-1')
+        pastry.classList.add('border');
+        pastry.classList.add('rounded');
+        pastry.classList.add('my-1');
         // { itemName: "BANNANAN MUFFIN", description: "Morfin" }
         pastry.textContent = item.itemName;
         cartItemsElement.appendChild(pastry)

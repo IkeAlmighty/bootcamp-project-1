@@ -44,4 +44,11 @@ function addCurrentCartItemToLocalStorage() {
 modalAddItemButton.addEventListener("click", function () {
     addCurrentCartItemToLocalStorage();
     modalAddItemButton.style.display = "none";
+    let cartAmount = document.getElementById('cart-amount');
+    let cartItems = getCartItemsFromLocalStorage();
+    let howLong = cartItems.length;
+    cartAmount.innerHTML = howLong;
 });
+
+// Cart amount display counter
+// add an updating number counter
