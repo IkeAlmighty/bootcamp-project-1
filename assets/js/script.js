@@ -40,15 +40,21 @@ function addCurrentCartItemToLocalStorage() {
     localStorage.setItem("cart", JSON.stringify(cartItems));
 }
 
+function updateVisualDisplay() {
+    // update the cart amount on the visual display
+    let cartAmount = document.getElementById("cart-amount");
+    let cartItems = getCartItemsFromLocalStorage();
+    let howLong = cartItems.length;
+    cartAmount.innerHTML = howLong;
+}
+
 // add event listener to modal to add the current cart item to localstorage:
 modalAddItemButton.addEventListener("click", function () {
     addCurrentCartItemToLocalStorage();
     modalAddItemButton.style.display = "none";
-    let cartAmount = document.getElementById('cart-amount');
-    let cartItems = getCartItemsFromLocalStorage();
-    let howLong = cartItems.length;
-    cartAmount.innerHTML = howLong;
+
+    updateVisualDisplay();
 });
 
-// Cart amount display counter
-// add an updating number counter
+// initialize the cart size visual display to the right number
+updateVisualDisplay();
